@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="nav-links">
-          <Link to="/" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+          <Link to="/about" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
             Who We Are
           </Link>
           <Link to="/service" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
@@ -90,7 +90,7 @@ const Navbar = () => {
             className="nav-links active"
           >
             <Link
-              to="/"
+              to="/about"
               onClick={() => setIsOpen(false)}
               className="nav-link"
               style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}

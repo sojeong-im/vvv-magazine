@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import JoinPage from './components/JoinPage';
 import ServicePage from './components/ServicePage';
+import AboutPage from './components/AboutPage';
+
 const Home = () => (
   <>
     <Hero />
@@ -28,6 +30,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/service" element={<ServicePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/join" element={<JoinPage />} />
