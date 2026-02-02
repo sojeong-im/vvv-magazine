@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,16 +49,12 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="nav-links">
-          {['Who We Are', 'Our Service'].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item.toLowerCase().replace(/\s+/g, '-'))}
-              className="nav-link"
-              style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}
-            >
-              {item}
-            </button>
-          ))}
+          <Link to="/" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+            Who We Are
+          </Link>
+          <Link to="/service" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+            Our Service
+          </Link>
           <button
             onClick={() => navigate('/contact')}
             className="nav-link"
@@ -93,16 +89,22 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="nav-links active"
           >
-            {['Who We Are', 'Our Service'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(/\s+/g, '-'))}
-                className="nav-link"
-                style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0' }}
-              >
-                {item}
-              </button>
-            ))}
+            <Link
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className="nav-link"
+              style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
+            >
+              Who We Are
+            </Link>
+            <Link
+              to="/service"
+              onClick={() => setIsOpen(false)}
+              className="nav-link"
+              style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
+            >
+              Our Service
+            </Link>
             <button
               onClick={() => {
                 navigate('/contact');
