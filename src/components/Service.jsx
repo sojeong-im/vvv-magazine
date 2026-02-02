@@ -4,26 +4,33 @@ import { Database, Users, TrendingUp } from 'lucide-react';
 
 const Service = () => {
     return (
-        <section id="our-service" className="py-32 bg-[#0d0f20] relative overflow-hidden">
-            {/* Abstract Background */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#56d061]/5 to-transparent z-0 pointer-events-none"></div>
+        <section id="our-service" className="section" style={{ background: '#0d0f20' }}>
+            <div className="service-bg" style={{
+                background: 'url(/service-visual.png) no-repeat center right',
+                backgroundSize: 'contain',
+                opacity: 0.1,
+                width: '60%',
+                height: '80%',
+                top: '10%'
+            }}></div>
 
-            <div className="container relative z-10">
-                <div className="text-center mb-20">
+            <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+                <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter"
+                        className="hero-title"
+                        style={{ fontSize: '3rem', marginBottom: '1.5rem' }}
                     >
                         Our <span className="text-gradient">Service</span>
                     </motion.h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                    <p style={{ color: '#a0a0a0', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
                         VVV 매거진은 단순한 콘텐츠를 넘어, 20대의 살아있는 목소리를 데이터로 연결합니다.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid-cols-3">
                     {[
                         {
                             icon: <Users size={40} />,
@@ -47,29 +54,33 @@ const Service = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.2 }}
-                            className="bg-[#1a1d3a] p-10 rounded-3xl border border-white/5 hover:border-[#56d061]/50 transition-all hover:-translate-y-2 group"
+                            className="service-card glass-panel"
+                            style={{ background: 'rgba(26, 30, 59, 0.4)' }}
                         >
-                            <div className="w-16 h-16 bg-[#56d061]/10 rounded-2xl flex items-center justify-center text-[#56d061] mb-6 group-hover:bg-[#56d061] group-hover:text-[#101227] transition-all">
+                            <div className="service-icon">
                                 {item.icon}
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                            <p className="text-gray-400 leading-relaxed text-sm">
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white', marginBottom: '1rem' }}>{item.title}</h3>
+                            <p style={{ color: '#a0a0a0', lineHeight: 1.6, fontSize: '0.9rem' }}>
                                 {item.desc}
                             </p>
                         </motion.div>
                     ))}
                 </div>
 
-                <div className="mt-20 p-10 rounded-3xl bg-gradient-to-r from-[#56d061] to-[#258d30] text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#101227] mb-4">
-                        새로운 비즈니스 가치를 창출하세요
-                    </h3>
-                    <p className="text-[#101227]/80 max-w-2xl mx-auto mb-8 font-medium">
-                        가장 젊고, 뜨거우며, 살아있는 20대 청년의 목소리를 콘텐츠와 데이터로 포착하고 싶은 기업이라면 지금 바로 문의하세요.
-                    </p>
-                    <button className="px-8 py-3 bg-[#101227] text-white font-bold rounded-full hover:scale-105 transition-transform">
-                        CONTACT FOR PARTNERSHIP
-                    </button>
+                <div style={{ marginTop: '5rem', padding: '4rem', borderRadius: '2rem', background: 'linear-gradient(90deg, #56d061 0%, #258d30 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'url(/hero-visual.png) center/cover', opacity: 0.1, mixBlendMode: 'overlay' }}></div>
+                    <div style={{ position: 'relative', zIndex: 10 }}>
+                        <h3 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#101227', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+                            PARTNER WITH VVV
+                        </h3>
+                        <p style={{ color: '#101227', maxWidth: '700px', margin: '0 auto 2.5rem', fontWeight: 600, fontSize: '1.1rem' }}>
+                            가장 젊고, 뜨거우며, 살아있는 20대 청년의 목소리를 콘텐츠와 데이터로 포착하고 싶은 기업이라면 지금 바로 문의하세요.
+                        </p>
+                        <button className="btn" style={{ background: '#101227', color: 'white', padding: '16px 48px', fontSize: '1rem' }}>
+                            CONTACT FOR PARTNERSHIP
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

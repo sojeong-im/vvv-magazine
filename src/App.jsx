@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App bg-[#101227] text-white overflow-hidden selection:bg-[#56d061] selection:text-[#101227]">
+    <div className="App">
       <Navbar />
       <Hero />
       <About />
