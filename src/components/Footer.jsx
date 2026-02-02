@@ -23,31 +23,29 @@ const Footer = () => {
                                 <Mail size={18} /> contact@vvv-magazine.com
                             </a>
                             <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', justifyContent: 'flex-end' }}>
-                                {[Instagram, Youtube, Facebook].map((Icon, idx) => (
-                                    <a key={idx} href="#" style={{
-                                        width: '40px',
-                                        height: '40px',
-                                        borderRadius: '50%',
-                                        border: '1px solid rgba(255,255,255,0.2)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        transition: 'all 0.3s'
+                                <a href="https://www.instagram.com/vvv__mag/?igsh=ZnhrYW55b2xoMjBm" target="_blank" rel="noopener noreferrer" style={{
+                                    width: '40px',
+                                    height: '40px',
+                                    borderRadius: '50%',
+                                    border: '1px solid rgba(255,255,255,0.2)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    transition: 'all 0.3s'
+                                }}
+                                    onMouseOver={(e) => {
+                                        e.currentTarget.style.background = 'var(--primary)';
+                                        e.currentTarget.style.borderColor = 'var(--primary)';
+                                        e.currentTarget.style.color = '#101227';
                                     }}
-                                        onMouseOver={(e) => {
-                                            e.currentTarget.style.background = 'var(--primary)';
-                                            e.currentTarget.style.borderColor = 'var(--primary)';
-                                            e.currentTarget.style.color = '#101227';
-                                        }}
-                                        onMouseOut={(e) => {
-                                            e.currentTarget.style.background = 'transparent';
-                                            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-                                            e.currentTarget.style.color = 'white';
-                                        }}
-                                    >
-                                        <Icon size={20} />
-                                    </a>
-                                ))}
+                                    onMouseOut={(e) => {
+                                        e.currentTarget.style.background = 'transparent';
+                                        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
+                                        e.currentTarget.style.color = 'white';
+                                    }}
+                                >
+                                    <Instagram size={20} />
+                                </a>
                             </div>
                             <p className="text-primary" style={{ fontWeight: 'bold' }}>@vvv__mag</p>
                         </div>
