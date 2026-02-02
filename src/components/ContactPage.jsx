@@ -68,6 +68,26 @@ const ContactPage = () => {
             <div className="floating-shape shape-2" style={{ bottom: '20%', opacity: 0.1 }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1000px' }}>
+                <button
+                    onClick={() => navigate('/')}
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        color: 'var(--text-muted)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        cursor: 'pointer',
+                        marginBottom: '3rem',
+                        fontSize: '1rem',
+                        transition: 'color 0.3s'
+                    }}
+                    onMouseOver={(e) => e.target.style.color = 'var(--primary)'}
+                    onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'}
+                >
+                    <ArrowLeft size={20} /> Back to Home
+                </button>
+
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '4rem' }}>
 
                     {/* Left Column: Info */}

@@ -42,6 +42,22 @@ const JoinPage = () => {
             <div className="bg-grid"></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '800px' }}>
+                <button
+                    onClick={() => navigate('/')}
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        color: 'var(--text-muted)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        cursor: 'pointer',
+                        marginBottom: '2rem'
+                    }}
+                >
+                    <ArrowLeft size={20} /> Back to Base
+                </button>
+
                 {/* Progress Bar */}
                 <div style={{ display: 'flex', gap: '10px', marginBottom: '3rem' }}>
                     {[1, 2, 3].map((s) => (

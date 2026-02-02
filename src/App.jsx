@@ -7,11 +7,13 @@ import Service from './components/Service';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import JoinPage from './components/JoinPage';
-const HomeContent = () => (
+const Home = () => (
   <>
+    <Navbar />
     <Hero />
     <About />
     <Service />
+    <Footer />
   </>
 );
 
@@ -25,14 +27,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<HomeContent />} />
+        <Route path="/" element={<Home />} />
         <Route path="/service" element={<ServicePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/join" element={<JoinPage />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
