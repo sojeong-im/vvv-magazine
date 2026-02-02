@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Database, Users, TrendingUp } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Service = () => {
+    const navigate = useNavigate();
+
     return (
         <section id="our-service" className="section" style={{ background: '#0d0f20' }}>
             <div className="service-bg" style={{
@@ -77,7 +80,11 @@ const Service = () => {
                         <p style={{ color: '#101227', maxWidth: '700px', margin: '0 auto 2.5rem', fontWeight: 600, fontSize: '1.1rem' }}>
                             가장 젊고, 뜨거우며, 살아있는 20대 청년의 목소리를 콘텐츠와 데이터로 포착하고 싶은 기업이라면 지금 바로 문의하세요.
                         </p>
-                        <button className="btn" style={{ background: '#101227', color: 'white', padding: '16px 48px', fontSize: '1rem' }}>
+                        <button
+                            className="btn"
+                            style={{ background: '#101227', color: 'white', padding: '16px 48px', fontSize: '1rem', cursor: 'pointer' }}
+                            onClick={() => navigate('/contact')}
+                        >
                             CONTACT FOR PARTNERSHIP
                         </button>
                     </div>
