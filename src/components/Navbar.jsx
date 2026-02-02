@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="nav-links">
-          {['Who We Are', 'Our Service', 'Contact'].map((item) => (
+          {['Who We Are', 'Our Service'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase().replace(/\s+/g, '-'))}
@@ -60,11 +60,18 @@ const Navbar = () => {
             </button>
           ))}
           <button
+            onClick={() => navigate('/contact')}
+            className="nav-link"
+            style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}
+          >
+            Contact
+          </button>
+          <button
             className="btn btn-primary"
             style={{ padding: '10px 24px', fontSize: '0.8rem' }}
-            onClick={() => scrollToSection('contact')}
+            onClick={() => navigate('/join')}
           >
-            Subscribe
+            Start VVV
           </button>
         </div>
 
@@ -86,7 +93,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="nav-links active"
           >
-            {['Who We Are', 'Our Service', 'Contact'].map((item) => (
+            {['Who We Are', 'Our Service'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase().replace(/\s+/g, '-'))}
@@ -96,6 +103,26 @@ const Navbar = () => {
                 {item}
               </button>
             ))}
+            <button
+              onClick={() => {
+                navigate('/contact');
+                setIsOpen(false);
+              }}
+              className="nav-link"
+              style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0' }}
+            >
+              Contact
+            </button>
+            <button
+              onClick={() => {
+                navigate('/join');
+                setIsOpen(false);
+              }}
+              className="nav-link"
+              style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0', fontWeight: 'bold' }}
+            >
+              Start VVV
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
