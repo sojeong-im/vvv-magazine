@@ -22,6 +22,7 @@ function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    console.log("VVV Magazine v2.0 - Loaded");
     window.scrollTo(0, 0);
   }, [pathname]);
 
