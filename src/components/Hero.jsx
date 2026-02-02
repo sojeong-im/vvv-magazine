@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Hero = () => {
     const navigate = useNavigate();
@@ -71,9 +71,9 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <button className="btn btn-primary" onClick={() => navigate('/join')}>
+                        <Link to="/join" className="btn btn-primary" style={{ textDecoration: 'none', zIndex: 100 }}>
                             START YOUR JOURNEY <ArrowRight size={20} />
-                        </button>
+                        </Link>
                         <button className="btn btn-outline" onClick={() => {
                             const element = document.getElementById('who-we-are');
                             if (element) element.scrollIntoView({ behavior: 'smooth' });
