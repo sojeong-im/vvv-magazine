@@ -68,7 +68,11 @@ const ContactPage = () => {
             <div className="floating-shape shape-2" style={{ bottom: '20%', opacity: 0.1 }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1000px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '4rem' }}>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: window.innerWidth > 768 ? '1fr 1.5fr' : '1fr',
+                    gap: '4rem'
+                }}>
 
                     {/* Left Column: Info */}
                     <motion.div

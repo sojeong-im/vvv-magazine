@@ -161,15 +161,15 @@ const AboutPage = () => {
                         viewport={{ once: true }}
                         style={{ textAlign: 'center', marginBottom: '5rem' }}
                     >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+                        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '1rem' }}>
                             THE <span className="text-gradient">3V PHILOSOPHY</span>
                         </h2>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+                        <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(1rem, 2vw, 1.1rem)', maxWidth: '600px', margin: '0 auto' }}>
                             VVV의 이름에 담긴 철학. 우리는 이 세 가지 가치를 통해 20대의 성장을 지원합니다.
                         </p>
                     </motion.div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                         {values.map((value, idx) => (
                             <ValueCard key={idx} value={value} index={idx} />
                         ))}

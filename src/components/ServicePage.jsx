@@ -59,7 +59,12 @@ const ServicePage = () => {
             {/* Service 1: Community & Content */}
             <section className="section">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: window.innerWidth > 768 ? '1fr 1fr' : '1fr',
+                        gap: '4rem',
+                        alignItems: 'center'
+                    }}>
                         <motion.div {...fadeInUp}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'var(--primary)', fontWeight: 'bold' }}>
                                 <Users size={20} />
@@ -102,7 +107,12 @@ const ServicePage = () => {
             {/* Service 2: Data Intelligence */}
             <section className="section" style={{ background: 'rgba(255,255,255,0.02)' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: window.innerWidth > 768 ? '1fr 1fr' : '1fr',
+                        gap: '4rem',
+                        alignItems: 'center'
+                    }}>
                         <motion.div
                             {...fadeInUp}
                             style={{ order: 1 }} // Mobile friendly ordering if needed, but for desktop 1fr 1fr handles visual

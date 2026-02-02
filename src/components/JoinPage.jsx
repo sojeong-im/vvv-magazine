@@ -71,7 +71,11 @@ const JoinPage = () => {
                                 당신의 전공 계열을 선택해주세요. VVV가 최적의 로드맵을 설계합니다.
                             </p>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: window.innerWidth > 640 ? '1fr 1fr' : '1fr',
+                                gap: '1.5rem'
+                            }}>
                                 {majors.map((m) => (
                                     <div
                                         key={m.id}
