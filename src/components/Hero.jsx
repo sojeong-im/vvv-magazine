@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+    const navigate = useNavigate();
+
     return (
         <section id="hero" className="hero">
             <div className="hero-bg-image" style={{
@@ -68,10 +71,13 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary" onClick={() => navigate('/join')}>
                             START YOUR JOURNEY <ArrowRight size={20} />
                         </button>
-                        <button className="btn btn-outline">
+                        <button className="btn btn-outline" onClick={() => {
+                            const element = document.getElementById('who-we-are');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}>
                             LEARN MORE
                         </button>
                     </div>

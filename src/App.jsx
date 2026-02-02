@@ -6,6 +6,7 @@ import About from './components/About';
 import Service from './components/Service';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
+import JoinPage from './components/JoinPage';
 
 const Home = () => (
   <>
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/join" element={<JoinPage />} />
       </Routes>
     </div>
   );
