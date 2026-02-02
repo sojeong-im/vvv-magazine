@@ -7,6 +7,7 @@ import Service from './components/Service';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import JoinPage from './components/JoinPage';
+import ServicePage from './components/ServicePage';
 const Home = () => (
   <>
     <Navbar />
