@@ -60,10 +60,8 @@ const ServicePage = () => {
             <section className="section">
                 <div className="container">
                     <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: window.innerWidth > 768 ? '1fr 1fr' : '1fr',
-                        gap: '4rem',
-                        alignItems: 'center'
+                        maxWidth: '800px',
+                        margin: '0 auto'
                     }}>
                         <motion.div {...fadeInUp}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'var(--primary)', fontWeight: 'bold' }}>
@@ -86,19 +84,6 @@ const ServicePage = () => {
                                     </li>
                                 ))}
                             </ul>
-                        </motion.div>
-                        <motion.div
-                            {...fadeInUp}
-                            transition={{ delay: 0.2 }}
-                            className="glass-panel"
-                            style={{
-                                height: '400px',
-                                background: 'url(/service-visual.png) center/cover',
-                                position: 'relative',
-                                border: '1px solid rgba(255,255,255,0.1)'
-                            }}
-                        >
-                            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(45deg, rgba(16,18,39,0.8), transparent)' }}></div>
                         </motion.div>
                     </div>
                 </div>
