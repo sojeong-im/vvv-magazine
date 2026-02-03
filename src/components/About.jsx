@@ -57,21 +57,6 @@ const About = () => {
                     </motion.div>
 
                     <div style={{ display: 'grid', gap: '1.5rem' }}>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8 }}
-                            style={{
-                                borderRadius: '1.5rem',
-                                overflow: 'hidden',
-                                marginBottom: '2rem',
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-                                border: '1px solid rgba(255,255,255,0.1)'
-                            }}
-                        >
-                            <img src="/about-visual.png" alt="VVV Vision" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                        </motion.div>
-
                         {cards.map((card, idx) => (
                             <motion.div
                                 key={idx}
