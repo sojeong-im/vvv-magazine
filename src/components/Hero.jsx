@@ -67,18 +67,18 @@ const Hero = () => {
 
                     <p className="hero-desc">
                         방향을 잃은 듯 막막한 20대.<br />
-                        당신의 대학 생활, 진로, 취업에 대한 모든 고민을 <strong className="text-primary">VVV 매거진</strong>이 함께 헤쳐나갑니다.
+                        당신의 대학 생활, 진로, 취업 고민을 <strong className="text-primary">VVV가 함께</strong> 풀어나갈게요 💪
                     </p>
 
                     <div className="hero-actions">
                         <Link to="/join" className="btn btn-primary" style={{ textDecoration: 'none', zIndex: 100 }}>
-                            START YOUR JOURNEY <ArrowRight size={20} />
+                            내 여정 시작하기 ✨ <ArrowRight size={20} />
                         </Link>
                         <button className="btn btn-outline" onClick={() => {
                             const element = document.getElementById('who-we-are');
                             if (element) element.scrollIntoView({ behavior: 'smooth' });
                         }}>
-                            LEARN MORE
+                            더 알아보기 🤔
                         </button>
                     </div>
                 </motion.div>

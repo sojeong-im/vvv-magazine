@@ -42,31 +42,31 @@ const AboutPage = () => {
     };
 
     const stats = [
-        { label: 'Active Students', value: 50000, suffix: '+', icon: <Users /> },
-        { label: 'Monthly Reach', value: 500000, suffix: '+', icon: <TrendingUp /> },
-        { label: 'Partner Companies', value: 120, suffix: '+', icon: <Award /> }
+        { label: '함께하는 대학생', value: 50000, suffix: '+', icon: <Users /> },
+        { label: '월간 도달 수', value: 500000, suffix: '+', icon: <TrendingUp /> },
+        { label: '파트너 기업', value: 120, suffix: '+', icon: <Award /> }
     ];
 
     const values = [
         {
             icon: <Eye size={40} />,
             title: 'VISION',
-            subtitle: '명확한 시야',
-            description: '20대의 막연한 미래를 선명한 로드맵으로 만듭니다. 데이터 기반 인사이트로 당신의 가능성을 정확히 진단합니다.',
+            subtitle: '시야 👀',
+            description: '막막한 미래? 우리가 길 찾아줄게. 데이터로 검증된 로드맵으로 너의 가능성을 정확히 보여줄게.',
             color: 'rgba(86, 208, 97, 0.2)'
         },
         {
             icon: <Target size={40} />,
             title: 'VALUE',
-            subtitle: '실질적 가치',
-            description: '피상적인 조언이 아닌, 검증된 실전 노하우를 제공합니다. 선배들의 실패와 성공 경험이 당신의 자산이 됩니다.',
+            subtitle: '가치 💎',
+            description: '겉핥기 말고 진짜 쓸모있는 정보만. 선배들이 삽질하면서 배운 노하우, 너한테 다 줄게.',
             color: 'rgba(37, 99, 235, 0.2)'
         },
         {
             icon: <Zap size={40} />,
             title: 'VICTORY',
-            subtitle: '성취의 순간',
-            description: '작은 성공부터 큰 도약까지, VVV와 함께한 모든 여정이 당신만의 승리 스토리가 됩니다.',
+            subtitle: '성공 🏆',
+            description: '작게든 크게든, VVV랑 같이한 모든 순간이 너만의 레전드가 될 거야.',
             color: 'rgba(124, 58, 237, 0.2)'
         }
     ];
@@ -93,13 +93,13 @@ const AboutPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="hero-badge" style={{ marginBottom: '2rem' }}>
-                            <Sparkles size={16} /> WHO WE ARE
+                            <Sparkles size={16} /> 우리가 누군지 궁금해? 🤔
                         </span>
 
                         <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: '2rem', lineHeight: 1.1 }}>
-                            WE ARE<br />
-                            <span className="text-gradient">NOT JUST</span><br />
-                            A MAGAZINE
+                            우리는 그냥<br />
+                            <span className="text-gradient">매거진이</span><br />
+                            아니야 ✨
                         </h1>
 
                         <motion.p
@@ -108,8 +108,8 @@ const AboutPage = () => {
                             transition={{ delay: 0.3, duration: 0.8 }}
                             style={{ fontSize: '1.3rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: 1.8 }}
                         >
-                            VVV는 20대 대학생의 <strong style={{ color: 'white' }}>길잡이이자, 데이터 분석가이며, 커리어 파트너</strong>입니다.<br />
-                            우리는 막연한 조언 대신 <span style={{ color: 'var(--primary)' }}>구체적인 액션 플랜</span>을 제시합니다.
+                            VVV는 <strong style={{ color: 'white' }}>20대의 현실 조언자</strong>이자, 데이터로 검증된 인사이트를 주는 친구야.<br />
+                            추상적인 말 대신 <span style={{ color: 'var(--primary)' }}>진짜 써먹을 수 있는</span> 정보만 골라줄게 💪
                         </motion.p>
                     </motion.div>
                 </div>
@@ -137,10 +137,10 @@ const AboutPage = () => {
                         style={{ textAlign: 'center', marginBottom: '4rem' }}
                     >
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                            NUMBERS DON'T <span className="text-gradient">LIE</span>
+                            숫자로 증명하는 <span className="text-gradient">진심 📊</span>
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
-                            데이터로 증명하는 VVV의 영향력
+                            말만 번지르르한 거 아니야, 데이터가 말해주거든 😎
                         </p>
                     </motion.div>
 
@@ -162,10 +162,10 @@ const AboutPage = () => {
                         style={{ textAlign: 'center', marginBottom: '5rem' }}
                     >
                         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '1rem' }}>
-                            THE <span className="text-gradient">3V PHILOSOPHY</span>
+                            우리가 중요하게 생각하는 <span className="text-gradient">3가지</span> ✨
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(1rem, 2vw, 1.1rem)', maxWidth: '600px', margin: '0 auto' }}>
-                            VVV의 이름에 담긴 철학. 우리는 이 세 가지 가치를 통해 20대의 성장을 지원합니다.
+                            VVV가 이름에 담은 의미. 이 세 가지가 우리가 일하는 방식이야.
                         </p>
                     </motion.div>
 
@@ -187,14 +187,14 @@ const AboutPage = () => {
                         className="glass-panel"
                         style={{ padding: '4rem', textAlign: 'center', border: '1px solid rgba(86, 208, 97, 0.2)' }}
                     >
-                        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--primary)' }}>OUR MISSION</h2>
+                        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--primary)' }}>우리의 꿈 🌱</h2>
                         <p style={{ fontSize: '1.3rem', lineHeight: 1.8, color: 'white', marginBottom: '2rem' }}>
-                            "모든 20대가 <strong>자신만의 길</strong>을 찾고,<br />
-                            <strong>데이터로 검증된 선택</strong>을 하며,<br />
-                            <strong>실질적인 성장</strong>을 이루는 세상을 만듭니다."
+                            "모든 20대가 <strong>자기만의 길</strong>을 찾고,<br />
+                            <strong>데이터로 증명된 선택</strong>을 하면서,<br />
+                            <strong>진짜 성장</strong>하는 세상을 만들고 싶어."
                         </p>
                         <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
-                            — VVV Magazine Team
+                            — VVV 매거진 팀 드림 💚
                         </div>
                     </motion.div>
                 </div>
