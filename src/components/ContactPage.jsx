@@ -81,8 +81,8 @@ const ContactPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="hero-title" style={{ fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '2rem', textAlign: 'left' }}>
-                            LET'S <br />
-                            <span className="text-gradient">COLLABORATE</span>
+                            함께 <br />
+                            <span className="text-gradient">만들어가요</span>
                         </h1>
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '3rem' }}>
                             VVV 매거진은 단순한 미디어를 넘어,<br />
@@ -93,13 +93,13 @@ const ContactPage = () => {
                         </p>
 
                         <div className="glass-panel" style={{ padding: '2rem', background: 'rgba(255,255,255,0.03)' }}>
-                            <h3 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.2rem' }}>Contact Info</h3>
+                            <h3 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.2rem' }}>연락처</h3>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)' }}>
                                     <Mail size={18} color="var(--primary)" /> contact@vvv-magazine.com
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)' }}>
-                                    <Building2 size={18} color="var(--primary)" /> Seoul, Republic of Korea
+                                    <Building2 size={18} color="var(--primary)" /> 서울, 대한민국
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ const ContactPage = () => {
                         <form onSubmit={handleSubmit} className="glass-panel" style={{ padding: '3rem' }}>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>YOUR NAME</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>성명</label>
                                     <input
                                         type="text"
                                         name="name"
@@ -123,12 +123,12 @@ const ContactPage = () => {
                                         onBlur={handleBlur}
                                         value={formData.name}
                                         onChange={handleChange}
-                                        placeholder="Name"
+                                        placeholder="이름"
                                         required
                                     />
                                 </div>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>ORGANIZATION</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>소속</label>
                                     <input
                                         type="text"
                                         name="company"
@@ -137,7 +137,7 @@ const ContactPage = () => {
                                         onBlur={handleBlur}
                                         value={formData.company}
                                         onChange={handleChange}
-                                        placeholder="Company Name"
+                                        placeholder="회사명 / 학교명"
                                         required
                                     />
                                 </div>
@@ -145,7 +145,7 @@ const ContactPage = () => {
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>EMAIL ADDRESS</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>이메일</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -159,7 +159,7 @@ const ContactPage = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>PHONE NUMBER</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>연락처</label>
                                     <input
                                         type="tel"
                                         name="phone"
@@ -174,7 +174,7 @@ const ContactPage = () => {
                             </div>
 
                             <div style={{ marginBottom: '1.5rem' }}>
-                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>INQUIRY TYPE</label>
+                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>문의 유형</label>
                                 <select
                                     name="type"
                                     style={{ ...inputStyle, cursor: 'pointer', appearance: 'none' }}
@@ -183,16 +183,16 @@ const ContactPage = () => {
                                     value={formData.type}
                                     onChange={handleChange}
                                 >
-                                    <option style={{ color: 'black' }} value="partnership">Partnership Proposal (제휴/협업)</option>
-                                    <option style={{ color: 'black' }} value="advertising">Advertising & Marketing (광고/마케팅)</option>
-                                    <option style={{ color: 'black' }} value="data">Data Service Inquiry (데이터 서비스)</option>
-                                    <option style={{ color: 'black' }} value="press">Press & Interview (취재/인터뷰)</option>
-                                    <option style={{ color: 'black' }} value="other">Other Inquiries (기타)</option>
+                                    <option style={{ color: 'black' }} value="partnership">제휴 및 협업</option>
+                                    <option style={{ color: 'black' }} value="advertising">광고 및 마케팅</option>
+                                    <option style={{ color: 'black' }} value="data">데이터 서비스 문의</option>
+                                    <option style={{ color: 'black' }} value="press">취재 및 인터뷰</option>
+                                    <option style={{ color: 'black' }} value="other">기타 문의</option>
                                 </select>
                             </div>
 
                             <div style={{ marginBottom: '2.5rem' }}>
-                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>MESSAGE</label>
+                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>문의 내용</label>
                                 <textarea
                                     name="message"
                                     style={{ ...inputStyle, minHeight: '150px', resize: 'vertical' }}
@@ -200,7 +200,7 @@ const ContactPage = () => {
                                     onBlur={handleBlur}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Tell us about your project or inquiry..."
+                                    placeholder="문의하실 내용을 자세히 적어주세요..."
                                     required
                                 ></textarea>
                             </div>
@@ -212,9 +212,9 @@ const ContactPage = () => {
                                 disabled={isSubmitted}
                             >
                                 {isSubmitted ? (
-                                    <>Sent Successfully <CheckCircle size={20} /></>
+                                    <>전송 성공 <CheckCircle size={20} /></>
                                 ) : (
-                                    <>SEND MESSAGE <Send size={20} /></>
+                                    <>문의하기 <Send size={20} /></>
                                 )}
                             </button>
                         </form>
