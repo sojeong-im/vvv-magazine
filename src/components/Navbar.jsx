@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="nav-links">
           <Link to="/about" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
-            우리는
+            브랜드
           </Link>
           <Link to="/service" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
             서비스
@@ -60,14 +60,14 @@ const Navbar = () => {
             className="nav-link"
             style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}
           >
-            문의하기
+            고객지원
           </button>
           <button
             className="btn btn-primary"
             style={{ padding: '10px 24px', fontSize: '0.8rem' }}
             onClick={() => navigate('/join')}
           >
-            시작하기
+            무료 체험
           </button>
         </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
-              우리는
+              브랜드
             </Link>
             <Link
               to="/service"
@@ -113,7 +113,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0' }}
             >
-              문의하기
+              고객지원
             </button>
             <button
               onClick={() => {
@@ -123,7 +123,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0', fontWeight: 'bold' }}
             >
-              시작하기
+              무료 체험
             </button>
           </motion.div>
         )}
