@@ -43,8 +43,15 @@ const Navbar = () => {
           onClick={() => scrollToSection('hero')}
           style={{ cursor: 'pointer' }}
         >
-          <span className="text-primary">VVV</span>
-          <span style={{ color: 'white' }}>MAGAZINE.</span>
+          <span style={{
+            fontSize: '1.8rem',
+            fontWeight: '800',
+            background: 'linear-gradient(135deg, var(--primary) 0%, #34d058 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            letterSpacing: '0.05em'
+          }}>VVV</span>
         </div>
 
         {/* Desktop Menu */}
