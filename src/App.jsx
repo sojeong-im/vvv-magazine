@@ -9,6 +9,7 @@ import ContactPage from './components/ContactPage';
 import JoinPage from './components/JoinPage';
 import ServicePage from './components/ServicePage';
 import AboutPage from './components/AboutPage';
+import MajorGuidePage from './components/MajorGuidePage';
 
 const Home = () => (
   <>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/service" element={<ServicePage />} />
+        <Route path="/major-guide" element={<MajorGuidePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/join" element={<JoinPage />} />
       </Routes>

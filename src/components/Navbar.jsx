@@ -62,6 +62,9 @@ const Navbar = () => {
           <Link to="/service" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
             서비스
           </Link>
+          <Link to="/major-guide" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+            전공 가이드
+          </Link>
           <button
             onClick={() => navigate('/contact')}
             className="nav-link"
@@ -111,6 +114,14 @@ const Navbar = () => {
               style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
               서비스
+            </Link>
+            <Link
+              to="/major-guide"
+              onClick={() => setIsOpen(false)}
+              className="nav-link"
+              style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
+            >
+              전공 가이드
             </Link>
             <button
               onClick={() => {
