@@ -72,13 +72,13 @@ const Hero = () => {
 
                     <div className="hero-actions">
                         <Link to="/join" className="btn btn-primary" style={{ textDecoration: 'none', zIndex: 100 }}>
-                            내 여정 시작하기 ✨ <ArrowRight size={20} />
+                            내 여정 시작하기 <ArrowRight size={20} />
                         </Link>
                         <button className="btn btn-outline" onClick={() => {
                             const element = document.getElementById('who-we-are');
                             if (element) element.scrollIntoView({ behavior: 'smooth' });
                         }}>
-                            더 알아보기 🤔
+                            더 알아보기
                         </button>
                     </div>
                 </motion.div>

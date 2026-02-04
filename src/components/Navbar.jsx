@@ -50,24 +50,24 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="nav-links">
           <Link to="/about" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
-            Who We Are
+            우리는
           </Link>
           <Link to="/service" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
-            Our Service
+            서비스
           </Link>
           <button
             onClick={() => navigate('/contact')}
             className="nav-link"
             style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}
           >
-            Contact
+            문의하기
           </button>
           <button
             className="btn btn-primary"
             style={{ padding: '10px 24px', fontSize: '0.8rem' }}
             onClick={() => navigate('/join')}
           >
-            Start VVV
+            시작하기
           </button>
         </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
-              Who We Are
+              우리는
             </Link>
             <Link
               to="/service"
@@ -103,7 +103,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
-              Our Service
+              서비스
             </Link>
             <button
               onClick={() => {
@@ -113,7 +113,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0' }}
             >
-              Contact
+              문의하기
             </button>
             <button
               onClick={() => {
@@ -123,7 +123,7 @@ const Navbar = () => {
               className="nav-link"
               style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0', fontWeight: 'bold' }}
             >
-              Start VVV
+              시작하기
             </button>
           </motion.div>
         )}

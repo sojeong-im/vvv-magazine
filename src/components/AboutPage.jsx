@@ -51,21 +51,21 @@ const AboutPage = () => {
         {
             icon: <Eye size={40} />,
             title: 'VISION',
-            subtitle: '시야 👀',
+            subtitle: '시야',
             description: '막막한 미래? 우리가 길 찾아줄게. 데이터로 검증된 로드맵으로 너의 가능성을 정확히 보여줄게.',
             color: 'rgba(86, 208, 97, 0.2)'
         },
         {
             icon: <Target size={40} />,
             title: 'VALUE',
-            subtitle: '가치 💎',
+            subtitle: '가치',
             description: '겉핥기 말고 진짜 쓸모있는 정보만. 선배들이 삽질하면서 배운 노하우, 너한테 다 줄게.',
             color: 'rgba(37, 99, 235, 0.2)'
         },
         {
             icon: <Zap size={40} />,
             title: 'VICTORY',
-            subtitle: '성공 🏆',
+            subtitle: '성공',
             description: '작게든 크게든, VVV랑 같이한 모든 순간이 너만의 레전드가 될 거야.',
             color: 'rgba(124, 58, 237, 0.2)'
         }
@@ -93,13 +93,13 @@ const AboutPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="hero-badge" style={{ marginBottom: '2rem' }}>
-                            <Sparkles size={16} /> 우리가 누군지 궁금해? 🤔
+                            <Sparkles size={16} /> 우리가 누군지 궁금해
                         </span>
 
                         <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', marginBottom: '2rem', lineHeight: 1.1 }}>
                             우리는 그냥<br />
                             <span className="text-gradient">매거진이</span><br />
-                            아니야 ✨
+                            아니야
                         </h1>
 
                         <motion.p
@@ -109,7 +109,7 @@ const AboutPage = () => {
                             style={{ fontSize: '1.3rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: 1.8 }}
                         >
                             VVV는 <strong style={{ color: 'white' }}>20대의 현실 조언자</strong>이자, 데이터로 검증된 인사이트를 주는 친구야.<br />
-                            추상적인 말 대신 <span style={{ color: 'var(--primary)' }}>진짜 써먹을 수 있는</span> 정보만 골라줄게 💪
+                            추상적인 말 대신 <span style={{ color: 'var(--primary)' }}>진짜 써먹을 수 있는</span> 정보만 골라줄게
                         </motion.p>
                     </motion.div>
                 </div>
@@ -137,10 +137,10 @@ const AboutPage = () => {
                         style={{ textAlign: 'center', marginBottom: '4rem' }}
                     >
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                            숫자로 증명하는 <span className="text-gradient">진심 📊</span>
+                            숫자로 증명하는 <span className="text-gradient">진심</span>
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
-                            말만 번지르르한 거 아니야, 데이터가 말해주거든 😎
+                            말만 번지르르한 거 아니야, 데이터가 말해주거든
                         </p>
                     </motion.div>
 
@@ -162,7 +162,7 @@ const AboutPage = () => {
                         style={{ textAlign: 'center', marginBottom: '5rem' }}
                     >
                         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '1rem' }}>
-                            우리가 중요하게 생각하는 <span className="text-gradient">3가지</span> ✨
+                            우리가 중요하게 생각하는 <span className="text-gradient">3가지</span>
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(1rem, 2vw, 1.1rem)', maxWidth: '600px', margin: '0 auto' }}>
                             VVV가 이름에 담은 의미. 이 세 가지가 우리가 일하는 방식이야.
@@ -187,14 +187,14 @@ const AboutPage = () => {
                         className="glass-panel"
                         style={{ padding: '4rem', textAlign: 'center', border: '1px solid rgba(86, 208, 97, 0.2)' }}
                     >
-                        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--primary)' }}>우리의 꿈 🌱</h2>
+                        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--primary)' }}>우리의 꿈</h2>
                         <p style={{ fontSize: '1.3rem', lineHeight: 1.8, color: 'white', marginBottom: '2rem' }}>
                             "모든 20대가 <strong>자기만의 길</strong>을 찾고,<br />
                             <strong>데이터로 증명된 선택</strong>을 하면서,<br />
                             <strong>진짜 성장</strong>하는 세상을 만들고 싶어."
                         </p>
                         <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
-                            — VVV 매거진 팀 드림 💚
+                            — VVV 매거진 팀 드림
                         </div>
                     </motion.div>
                 </div>
