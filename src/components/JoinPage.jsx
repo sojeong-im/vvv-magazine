@@ -15,17 +15,17 @@ const JoinPage = () => {
     });
 
     const majors = [
-        { id: 'tech', icon: <Code size={30} />, label: 'Tech & Engineering', desc: '공학 / IT / 개발' },
-        { id: 'arts', icon: <PenTool size={30} />, label: 'Arts & Design', desc: '디자인 / 예술 / 체육' },
-        { id: 'business', icon: <Briefcase size={30} />, label: 'Business & Economy', desc: '경영 / 경제 / 마케팅' },
-        { id: 'humanities', icon: <GraduationCap size={30} />, label: 'Humanities & Social', desc: '인문 / 사회 / 어문' }
+        { id: 'tech', icon: <Code size={30} />, label: '공학 및 IT', desc: '공학 / IT / 개발' },
+        { id: 'arts', icon: <PenTool size={30} />, label: '예체능계열', desc: '디자인 / 예술 / 체육' },
+        { id: 'business', icon: <Briefcase size={30} />, label: '상경계열', desc: '경영 / 경제 / 마케팅' },
+        { id: 'humanities', icon: <GraduationCap size={30} />, label: '인문사회계열', desc: '인문 / 사회 / 어문' }
     ];
 
     const programs = [
-        { id: 'mentoring', label: '1:1 Mentoring', desc: '현직자 선배님과의 프라이빗 커피챗' },
-        { id: 'research', label: 'Major Research', desc: '나만의 전공 심화 리서치 프로젝트' },
-        { id: 'networking', label: 'V-Networking', desc: '같은 관심사를 가진 20대와의 만남' },
-        { id: 'reporter', label: 'Student Reporter', desc: 'VVV 매거진 대학생 에디터 지원' }
+        { id: 'mentoring', label: '1:1 멘토링', desc: '현직자 선배님과의 프라이빗 커피챗' },
+        { id: 'research', label: '전공 리서치', desc: '나만의 전공 심화 리서치 프로젝트' },
+        { id: 'networking', label: '네트워킹', desc: '같은 관심사를 가진 20대와의 만남' },
+        { id: 'reporter', label: '학생 에디터', desc: 'VVV 매거진 대학생 에디터 지원' }
     ];
 
     const handleNext = () => setStep(step + 1);
@@ -65,7 +65,7 @@ const JoinPage = () => {
                             exit={{ opacity: 0, x: -20 }}
                         >
                             <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                                SELECT YOUR <span className="text-gradient">BASE DATA</span>
+                                전공 <span className="text-gradient">계열 선택</span>
                             </h1>
                             <p style={{ color: 'var(--text-muted)', marginBottom: '3rem' }}>
                                 당신의 전공 계열을 선택해주세요. VVV가 최적의 로드맵을 설계합니다.
@@ -110,7 +110,7 @@ const JoinPage = () => {
                             exit={{ opacity: 0, x: -20 }}
                         >
                             <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                                SELECT YOUR <span className="text-gradient">MISSION</span>
+                                희망 프로그램 <span className="text-gradient">선택</span>
                             </h1>
                             <p style={{ color: 'var(--text-muted)', marginBottom: '3rem' }}>
                                 현재 가장 필요한 도움이나 관심있는 프로그램을 선택해주세요.
@@ -144,7 +144,7 @@ const JoinPage = () => {
                                     </div>
                                 ))}
                             </div>
-                            <button onClick={handleBack} style={{ marginTop: '2rem', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>Back</button>
+                            <button onClick={handleBack} style={{ marginTop: '2rem', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>이전</button>
                         </motion.div>
                     )}
 
@@ -157,15 +157,15 @@ const JoinPage = () => {
                             exit={{ opacity: 0, x: -20 }}
                         >
                             <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                                INPUT <span className="text-gradient">ACCESS KEY</span>
+                                신청자 <span className="text-gradient">정보 입력</span>
                             </h1>
                             <p style={{ color: 'var(--text-muted)', marginBottom: '3rem' }}>
-                                선택하신 미션 수행을 위한 안내를 받으실 연락처를 입력해주세요.
+                                선택하신 프로그램 안내를 받으실 연락처를 입력해주세요.
                             </p>
 
                             <form onSubmit={handleSubmit} className="glass-panel" style={{ padding: '2.5rem' }}>
                                 <div style={{ marginBottom: '1.5rem' }}>
-                                    <label style={{ display: 'block', color: 'var(--primary)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '0.9rem' }}>YOUR NAME</label>
+                                    <label style={{ display: 'block', color: 'var(--primary)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '0.9rem' }}>성명</label>
                                     <input
                                         type="text"
                                         placeholder="이름"
@@ -176,7 +176,7 @@ const JoinPage = () => {
                                     />
                                 </div>
                                 <div style={{ marginBottom: '1.5rem' }}>
-                                    <label style={{ display: 'block', color: 'var(--primary)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '0.9rem' }}>PHONE NUMBER</label>
+                                    <label style={{ display: 'block', color: 'var(--primary)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '0.9rem' }}>연락처</label>
                                     <input
                                         type="tel"
                                         placeholder="010-0000-0000"
@@ -187,7 +187,7 @@ const JoinPage = () => {
                                     />
                                 </div>
                                 <div style={{ marginBottom: '2.5rem' }}>
-                                    <label style={{ display: 'block', color: 'var(--primary)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '0.9rem' }}>EMAIL</label>
+                                    <label style={{ display: 'block', color: 'var(--primary)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '0.9rem' }}>이메일</label>
                                     <input
                                         type="email"
                                         placeholder="email@address.com"
@@ -198,10 +198,10 @@ const JoinPage = () => {
                                     />
                                 </div>
                                 <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '1.2rem', fontSize: '1.1rem' }}>
-                                    COMPLETE REGISTRATION
+                                    신청 완료
                                 </button>
                             </form>
-                            <button onClick={handleBack} style={{ marginTop: '2rem', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>Back</button>
+                            <button onClick={handleBack} style={{ marginTop: '2rem', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>이전</button>
                         </motion.div>
                     )}
 
@@ -217,7 +217,7 @@ const JoinPage = () => {
                                 <Sparkles size={40} color="#101227" />
                             </div>
                             <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
-                                SYSTEM <span className="text-gradient">INITIATED</span>
+                                신청 <span className="text-gradient">완료</span>
                             </h1>
                             <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', marginBottom: '3rem', maxWidth: '500px', margin: '0 auto 3rem' }}>
                                 정상적으로 접수되었습니다.<br />
@@ -225,7 +225,7 @@ const JoinPage = () => {
                                 <strong style={{ color: 'white' }}>24시간 내에 문자로 전송</strong>해드립니다.
                             </p>
                             <button onClick={() => navigate('/')} className="btn btn-outline">
-                                RETURN TO HOME
+                                홈으로 돌아가기
                             </button>
                         </motion.div>
                     )}
