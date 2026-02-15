@@ -1,54 +1,67 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, Users, TrendingUp } from 'lucide-react';
+import { Database, Users, TrendingUp, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Service = () => {
     const navigate = useNavigate();
 
     return (
-        <section id="our-service" className="section" style={{ background: '#0d0f20' }}>
-            <div className="service-bg" style={{
-                background: 'url(/service-visual.png) no-repeat center right',
-                backgroundSize: 'contain',
-                opacity: 0.1,
-                width: '60%',
-                height: '80%',
-                top: '10%'
-            }}></div>
+        <section id="our-service" className="section" style={{ background: '#000', color: '#fff', borderTop: '4px solid #fff', borderBottom: '4px solid #fff', padding: '100px 0', overflow: 'hidden' }}>
+            <div className="container">
+                <div style={{ textAlign: 'left', marginBottom: '4rem', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
+                    <h2 style={{
+                        fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+                        fontFamily: 'var(--font-main)', // Use Pretendard for Korean title
+                        fontWeight: 900,
+                        lineHeight: 1.1,
+                        letterSpacing: '-0.02em',
+                        wordBreak: 'keep-all'
+                    }}>
+                        우리가<br />
+                        <span style={{
+                            color: 'transparent',
+                            WebkitTextStroke: '2px #fff',
+                            display: 'inline-block'
+                        }}>하는 것들.</span>
+                    </h2>
 
-            <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-                <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="hero-title"
-                        style={{ fontSize: '3rem', marginBottom: '1.5rem' }}
-                    >
-                        Our <span className="text-gradient">Service</span>
-                    </motion.h2>
-                    <p style={{ color: '#a0a0a0', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
-                        VVV 매거진은 단순한 콘텐츠를 넘어, 20대의 살아있는 목소리를 데이터로 연결합니다.
+                    <p style={{
+                        maxWidth: '400px',
+                        fontSize: '1.2rem',
+                        lineHeight: 1.6,
+                        fontWeight: 600,
+                        borderLeft: '4px solid var(--primary)',
+                        paddingLeft: '1.2rem'
+                    }}>
+                        <b>뇌피셜</b>은 사절합니다. <br />
+                        오직 <b>데이터</b>로 검증된 이야기만.<br />
+                        그게 우리의 방식입니다.
                     </p>
                 </div>
 
-                <div className="grid-cols-3">
+                <div className="grid-cols-3" style={{ gap: '0' }}>
                     {[
                         {
-                            icon: <Users size={40} />,
-                            title: "Youth Platform",
-                            desc: "가장 트렌디하고 살아있는 20대 청년의 목소리를 담는 플랫폼입니다. 대학생 기자단이 생산하고 20대 독자들이 열렬히 소비합니다."
+                            icon: <Users size={36} />,
+                            num: '01',
+                            title: "대학생 리얼 보이스",
+                            engTitle: "YOUTH PLATFORM",
+                            desc: "대학생 에디터 100명이 직접 취재한 캠퍼스 이야기. '진짜' 대학 생활을 보여줍니다."
                         },
                         {
-                            icon: <Database size={40} />,
-                            title: "Data Intelligence",
-                            desc: "가장 정확한 20대 소비 행태, 진로 변화, 라이프스타일 데이터로 축적하여 파트너 기업에 독보적인 인사이트를 제공합니다."
+                            icon: <Database size={36} />,
+                            num: '02',
+                            title: "데이터 팩트 체크",
+                            engTitle: "DATA INSIGHT",
+                            desc: "전공별 취업률, 연봉, 현실 스펙. 카더라 통신 말고 확실한 데이터를 분석합니다."
                         },
                         {
-                            icon: <TrendingUp size={40} />,
-                            title: "Target Marketing",
-                            desc: "20대 타겟 마케팅, 이제 감(感)이 아닌 데이터입니다. 기업 및 기관들과 정책 수립 및 마케팅 전략에 실질적인 도움을 드립니다."
+                            icon: <TrendingUp size={36} />,
+                            num: '03',
+                            title: "확실한 성과 증명",
+                            engTitle: "PERFORMANCE",
+                            desc: "정확한 타겟팅으로 결과물이 다릅니다. 기업과 대학생을 잇는 가장 확실한 다리."
                         }
                     ].map((item, idx) => (
                         <motion.div
@@ -56,38 +69,40 @@ const Service = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.2 }}
-                            className="service-card glass-panel"
-                            style={{ background: 'rgba(26, 30, 59, 0.4)' }}
+                            transition={{ delay: idx * 0.1 }}
+                            className="service-card-brutal"
+                            style={{
+                                padding: '3rem 2rem',
+                                border: '2px solid #fff',
+                                // Responsive border logic handled by CSS grid usually, but here inline needs care. 
+                                // We'll keep full borders to be safe on mobile wrapping as well.
+                                marginTop: '-2px', // Collapse borders vertically if stacked
+                                marginLeft: idx > 0 ? '-2px' : '0', // Collapse borders horizontally if side-by-side (tricky with inline styles)
+                                // Simplified approach: let borders double up or just use margin gap 0.
+                                background: '#000',
+                                color: '#fff',
+                                position: 'relative',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'space-between',
+                                minHeight: '380px',
+                                transition: 'all 0.3s'
+                            }}
+                            onMouseOver={(e) => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000'; }}
+                            onMouseOut={(e) => { e.currentTarget.style.background = '#000'; e.currentTarget.style.color = '#fff'; }}
                         >
-                            <div className="service-icon">
-                                {item.icon}
+                            <div>
+                                <div style={{ fontSize: '1rem', fontWeight: 800, fontFamily: 'var(--font-serif)', opacity: 0.5, marginBottom: '1.5rem', border: '1px solid #777', display: 'inline-block', padding: '2px 8px', borderRadius: '20px' }}>{item.engTitle}</div>
+                                <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem', wordBreak: 'keep-all' }}>{item.title}</h3>
+                                <p style={{ fontSize: '1.05rem', lineHeight: 1.6, fontWeight: 400, opacity: 0.9, wordBreak: 'keep-all' }}>
+                                    {item.desc}
+                                </p>
                             </div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white', marginBottom: '1rem' }}>{item.title}</h3>
-                            <p style={{ color: '#a0a0a0', lineHeight: 1.6, fontSize: '0.9rem' }}>
-                                {item.desc}
-                            </p>
+                            <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, cursor: 'pointer', fontSize: '0.95rem' }} onClick={() => navigate('/service')}>
+                                자세히 보기 <ArrowRight size={18} />
+                            </div>
                         </motion.div>
                     ))}
-                </div>
-
-                <div style={{ marginTop: '5rem', padding: '4rem', borderRadius: '2rem', background: 'linear-gradient(90deg, #56d061 0%, #258d30 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'url(/hero-visual.png) center/cover', opacity: 0.1, mixBlendMode: 'overlay' }}></div>
-                    <div style={{ position: 'relative', zIndex: 10 }}>
-                        <h3 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#101227', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
-                            PARTNER WITH VVV
-                        </h3>
-                        <p style={{ color: '#101227', maxWidth: '700px', margin: '0 auto 2.5rem', fontWeight: 600, fontSize: '1.1rem' }}>
-                            가장 젊고, 뜨거우며, 살아있는 20대 청년의 목소리를 콘텐츠와 데이터로 포착하고 싶은 기업이라면 지금 바로 문의하세요.
-                        </p>
-                        <button
-                            className="btn"
-                            style={{ background: '#101227', color: 'white', padding: '16px 48px', fontSize: '1rem', cursor: 'pointer' }}
-                            onClick={() => navigate('/contact')}
-                        >
-                            CONTACT FOR PARTNERSHIP
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Youtube, Facebook, Mail } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -8,17 +8,25 @@ const Footer = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', marginBottom: '4rem' }}>
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, lineHeight: 1.1, marginBottom: '1.5rem', textTransform: 'uppercase' }}>
+                            <h2 style={{
+                                fontSize: '2.5rem',
+                                fontWeight: 900,
+                                lineHeight: 1.1,
+                                marginBottom: '1.5rem',
+                                textTransform: 'uppercase',
+                                fontFamily: 'var(--font-serif)',
+                                color: 'var(--text-dark)'
+                            }}>
                                 Let's Make <br />
                                 Something <span className="text-primary">Great.</span>
                             </h2>
                             <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
-                                20대의 모든 질문, <strong style={{ color: 'white' }}>VVV</strong>에서 답을 찾다.
+                                20대의 모든 질문, <strong style={{ color: 'var(--text-dark)' }}>VVV</strong>에서 답을 찾다.
                             </p>
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-end', textAlign: 'right' }}>
-                            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Contact Us</h3>
+                            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>Contact Us</h3>
                             <a href="mailto:contact@vvv-magazine.com" style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.95rem', justifyContent: 'flex-end' }}>
                                 <Mail size={18} /> contact@vvv-magazine.com
                             </a>
@@ -27,39 +35,40 @@ const Footer = () => {
                                     width: '40px',
                                     height: '40px',
                                     borderRadius: '50%',
-                                    border: '1px solid rgba(255,255,255,0.2)',
+                                    border: '1px solid var(--border-color)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    transition: 'all 0.3s'
+                                    transition: 'all 0.3s',
+                                    color: 'var(--text-muted)'
                                 }}
                                     onMouseOver={(e) => {
                                         e.currentTarget.style.background = 'var(--primary)';
                                         e.currentTarget.style.borderColor = 'var(--primary)';
-                                        e.currentTarget.style.color = '#101227';
+                                        e.currentTarget.style.color = 'white';
                                     }}
                                     onMouseOut={(e) => {
                                         e.currentTarget.style.background = 'transparent';
-                                        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-                                        e.currentTarget.style.color = 'white';
+                                        e.currentTarget.style.borderColor = 'var(--border-color)';
+                                        e.currentTarget.style.color = 'var(--text-muted)';
                                     }}
                                 >
                                     <Instagram size={20} />
                                 </a>
                             </div>
-                            <p className="text-primary" style={{ fontWeight: 'bold' }}>@vvv__mag</p>
+                            <p style={{ color: 'var(--primary-dark)', fontWeight: 'bold' }}>@vvv__mag</p>
                         </div>
                     </div>
                 </div>
 
                 <div style={{
-                    borderTop: '1px solid rgba(255,255,255,0.1)',
+                    borderTop: '1px solid var(--border-color)',
                     paddingTop: '2rem',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     fontSize: '0.8rem',
-                    color: 'rgba(255,255,255,0.4)',
+                    color: 'var(--text-light)',
                     flexWrap: 'wrap',
                     gap: '1rem'
                 }}>
@@ -75,16 +84,17 @@ const Footer = () => {
                     marginTop: '5rem',
                     userSelect: 'none',
                     pointerEvents: 'none',
-                    opacity: 0.05
+                    opacity: 0.04
                 }}>
                     <h1 style={{
                         fontSize: '15vw',
                         lineHeight: 0.8,
                         fontWeight: 900,
                         textAlign: 'center',
-                        color: 'white',
+                        color: 'var(--text-dark)',
                         letterSpacing: '0.05em',
-                        margin: 0
+                        margin: 0,
+                        fontFamily: 'var(--font-serif)'
                     }}>
                         VVV MAG
                     </h1>

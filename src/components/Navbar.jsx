@@ -45,30 +45,28 @@ const Navbar = () => {
         >
           <span style={{
             fontSize: '1.8rem',
-            fontWeight: '800',
-            background: 'linear-gradient(135deg, var(--primary) 0%, #34d058 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
+            fontWeight: '900',
+            fontFamily: 'var(--font-serif)',
+            color: 'var(--text-dark)',
             letterSpacing: '0.05em'
           }}>VVV</span>
         </div>
 
         {/* Desktop Menu */}
         <div className="nav-links">
-          <Link to="/about" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+          <Link to="/about" className="nav-link" style={{ textDecoration: 'none' }}>
             브랜드
           </Link>
-          <Link to="/service" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+          <Link to="/service" className="nav-link" style={{ textDecoration: 'none' }}>
             서비스
           </Link>
-          <Link to="/major-guide" className="nav-link" style={{ color: 'white', textDecoration: 'none' }}>
+          <Link to="/major-guide" className="nav-link" style={{ textDecoration: 'none' }}>
             전공 가이드
           </Link>
           <button
             onClick={() => navigate('/contact')}
             className="nav-link"
-            style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-main)' }}
           >
             고객지원
           </button>
@@ -103,7 +101,7 @@ const Navbar = () => {
               to="/about"
               onClick={() => setIsOpen(false)}
               className="nav-link"
-              style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
+              style={{ display: 'block', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
               브랜드
             </Link>
@@ -111,7 +109,7 @@ const Navbar = () => {
               to="/service"
               onClick={() => setIsOpen(false)}
               className="nav-link"
-              style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
+              style={{ display: 'block', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
               서비스
             </Link>
@@ -119,7 +117,7 @@ const Navbar = () => {
               to="/major-guide"
               onClick={() => setIsOpen(false)}
               className="nav-link"
-              style={{ display: 'block', color: 'white', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
+              style={{ display: 'block', textDecoration: 'none', fontSize: '1.2rem', padding: '10px 0' }}
             >
               전공 가이드
             </Link>
@@ -129,7 +127,7 @@ const Navbar = () => {
                 setIsOpen(false);
               }}
               className="nav-link"
-              style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0' }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0', fontFamily: 'var(--font-main)' }}
             >
               고객지원
             </button>
@@ -139,7 +137,7 @@ const Navbar = () => {
                 setIsOpen(false);
               }}
               className="nav-link"
-              style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0', fontWeight: 'bold' }}
+              style={{ background: 'none', border: 'none', color: 'var(--primary-dark)', cursor: 'pointer', textAlign: 'left', fontSize: '1.2rem', padding: '10px 0', fontWeight: 'bold', fontFamily: 'var(--font-main)' }}
             >
               무료 체험
             </button>

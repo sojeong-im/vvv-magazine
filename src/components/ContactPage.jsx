@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, ArrowLeft, Building2, User, Mail, Phone, MessageSquare, CheckCircle } from 'lucide-react';
+import { Send, Building2, Mail, CheckCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const ContactPage = () => {
@@ -39,38 +39,39 @@ const ContactPage = () => {
     const inputStyle = {
         width: '100%',
         padding: '1rem',
-        background: 'rgba(255, 255, 255, 0.05)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
+        background: 'var(--bg-subtle)',
+        border: '1px solid var(--border-color)',
         borderRadius: '0.75rem',
-        color: 'white',
+        color: 'var(--text-main)',
         fontSize: '1rem',
         marginTop: '0.5rem',
         transition: 'all 0.3s',
-        outline: 'none'
+        outline: 'none',
+        fontFamily: 'var(--font-main)'
     };
 
     const handleFocus = (e) => {
         e.target.style.borderColor = 'var(--primary)';
-        e.target.style.background = 'rgba(86, 208, 97, 0.05)';
-        e.target.style.boxShadow = '0 0 15px rgba(86, 208, 97, 0.1)';
+        e.target.style.background = 'white';
+        e.target.style.boxShadow = '0 0 0 3px rgba(86, 208, 97, 0.1)';
     };
 
     const handleBlur = (e) => {
-        e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-        e.target.style.background = 'rgba(255, 255, 255, 0.05)';
+        e.target.style.borderColor = 'var(--border-color)';
+        e.target.style.background = 'var(--bg-subtle)';
         e.target.style.boxShadow = 'none';
     };
 
     return (
-        <div style={{ minHeight: '100vh', background: 'var(--secondary)', paddingTop: '100px', paddingBottom: '5rem', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ minHeight: '100vh', background: 'linear-gradient(180deg, var(--bg-cream) 0%, #ffffff 50%)', paddingTop: '100px', paddingBottom: '5rem', position: 'relative', overflow: 'hidden' }}>
             <div className="bg-grid"></div>
-            <div className="floating-shape shape-1" style={{ top: '10%', opacity: 0.1 }}></div>
-            <div className="floating-shape shape-2" style={{ bottom: '20%', opacity: 0.1 }}></div>
+            <div className="floating-shape shape-1" style={{ top: '10%', opacity: 0.05 }}></div>
+            <div className="floating-shape shape-2" style={{ bottom: '20%', opacity: 0.05 }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1000px' }}>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: window.innerWidth > 768 ? '1fr 1.5fr' : '1fr',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
                     gap: '4rem'
                 }}>
 
@@ -80,11 +81,20 @@ const ContactPage = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="hero-title" style={{ fontSize: '3.5rem', lineHeight: 1.1, marginBottom: '2rem', textAlign: 'left' }}>
+                        <h1 style={{
+                            fontSize: '3.5rem',
+                            lineHeight: 1.1,
+                            marginBottom: '2rem',
+                            textAlign: 'left',
+                            fontFamily: 'var(--font-serif)',
+                            fontWeight: 700,
+                            color: 'var(--text-dark)',
+                            letterSpacing: '-0.03em'
+                        }}>
                             함께 <br />
                             <span className="text-gradient">만들어가요</span>
                         </h1>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '3rem' }}>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '3rem' }}>
                             VVV 매거진은 단순한 미디어를 넘어,<br />
                             20대와 기업을 연결하는 강력한 파트너입니다.<br />
                             <br />
@@ -92,14 +102,20 @@ const ContactPage = () => {
                             정확한 인텔리전스를 더해보세요.
                         </p>
 
-                        <div className="glass-panel" style={{ padding: '2rem', background: 'rgba(255,255,255,0.03)' }}>
-                            <h3 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.2rem' }}>연락처</h3>
+                        <div style={{
+                            padding: '2rem',
+                            background: 'white',
+                            borderRadius: '20px',
+                            border: '1px solid var(--border-color)',
+                            boxShadow: 'var(--shadow-sm)'
+                        }}>
+                            <h3 style={{ color: 'var(--text-dark)', marginBottom: '1.5rem', fontSize: '1.2rem', fontFamily: 'var(--font-serif)' }}>연락처</h3>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)' }}>
-                                    <Mail size={18} color="var(--primary)" /> contact@vvv-magazine.com
+                                    <Mail size={18} color="var(--primary-dark)" /> contact@vvv-magazine.com
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)' }}>
-                                    <Building2 size={18} color="var(--primary)" /> 서울, 대한민국
+                                    <Building2 size={18} color="var(--primary-dark)" /> 서울, 대한민국
                                 </div>
                             </div>
                         </div>
@@ -111,10 +127,16 @@ const ContactPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <form onSubmit={handleSubmit} className="glass-panel" style={{ padding: '3rem' }}>
+                        <form onSubmit={handleSubmit} style={{
+                            padding: '3rem',
+                            background: 'white',
+                            borderRadius: '24px',
+                            border: '1px solid var(--border-color)',
+                            boxShadow: 'var(--shadow-md)'
+                        }}>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>성명</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>성명</label>
                                     <input
                                         type="text"
                                         name="name"
@@ -128,7 +150,7 @@ const ContactPage = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>소속</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>소속</label>
                                     <input
                                         type="text"
                                         name="company"
@@ -145,7 +167,7 @@ const ContactPage = () => {
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>이메일</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>이메일</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -159,7 +181,7 @@ const ContactPage = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>연락처</label>
+                                    <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>연락처</label>
                                     <input
                                         type="tel"
                                         name="phone"
@@ -174,7 +196,7 @@ const ContactPage = () => {
                             </div>
 
                             <div style={{ marginBottom: '1.5rem' }}>
-                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>문의 유형</label>
+                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>문의 유형</label>
                                 <select
                                     name="type"
                                     style={{ ...inputStyle, cursor: 'pointer', appearance: 'none' }}
@@ -183,16 +205,16 @@ const ContactPage = () => {
                                     value={formData.type}
                                     onChange={handleChange}
                                 >
-                                    <option style={{ color: 'black' }} value="partnership">제휴 및 협업</option>
-                                    <option style={{ color: 'black' }} value="advertising">광고 및 마케팅</option>
-                                    <option style={{ color: 'black' }} value="data">데이터 서비스 문의</option>
-                                    <option style={{ color: 'black' }} value="press">취재 및 인터뷰</option>
-                                    <option style={{ color: 'black' }} value="other">기타 문의</option>
+                                    <option value="partnership">제휴 및 협업</option>
+                                    <option value="advertising">광고 및 마케팅</option>
+                                    <option value="data">데이터 서비스 문의</option>
+                                    <option value="press">취재 및 인터뷰</option>
+                                    <option value="other">기타 문의</option>
                                 </select>
                             </div>
 
                             <div style={{ marginBottom: '2.5rem' }}>
-                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--primary)' }}>문의 내용</label>
+                                <label style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--text-dark)' }}>문의 내용</label>
                                 <textarea
                                     name="message"
                                     style={{ ...inputStyle, minHeight: '150px', resize: 'vertical' }}
