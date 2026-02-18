@@ -18,7 +18,7 @@ const ArticleJosoPage = () => {
         <div style={{ background: '#fff', color: '#000', minHeight: '100vh', paddingTop: 'var(--nav-height)' }}>
             <Helmet>
                 <title>학과시식코너 — 조소과 편 | VVV 매거진</title>
-                <meta name="description" content="홍익대학교 조소과 3학년 전준수의 리얼 인터뷰. 드라마 속 조각가 vs 현실 조소과생의 차이를 낱낱이 파헤칩니다." />
+                <meta name="description" content="홍익대학교 조소과 3학년 퀴카의 리얼 인터뷰. 드라마 속 조각가 vs 현실 조소과생의 차이를 낱낱이 파헤칩니다." />
             </Helmet>
 
             {/* ── COVER ── */}
@@ -95,7 +95,7 @@ const ArticleJosoPage = () => {
                             조각과 소조를 통틀어 칭하는 말. <strong>조각</strong>은 어떤 재질을 깎아서 입체물을 만드는 것을 의미하고, <strong>소조</strong>는 어떤 재질을 계속 덧붙여서 입체물을 만드는 것을 말한다. 결국 조소는 <mark style={{ background: 'var(--primary)', color: '#000', padding: '0 4px' }}>입체물을 만드는 모든 미술활동</mark>을 지칭한다.
                         </p>
                         <p style={{ fontSize: '1rem', color: '#aaa', fontWeight: 500 }}>
-                            — 홍익대학교 조소과 3학년 전준수 인터뷰 중
+                            — 홍익대학교 조소과 3학년 퀴카 인터뷰 중
                         </p>
                     </motion.div>
                 </div>
@@ -113,7 +113,7 @@ const ArticleJosoPage = () => {
                                 Q. 간단한 자기소개
                             </div>
                             <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', lineHeight: 1.8, fontWeight: 500, wordBreak: 'keep-all' }}>
-                                홍익대학교 3학년 재학하고 있는 24살 <strong>전준수</strong>입니다. 별명은 인정하고 싶지 않지만 <strong>퀴카</strong>예요.
+                                홍익대학교 3학년 재학하고 있는 24살 조소과생입니다. 별명은 인정하고 싶지 않지만 <strong>퀴카</strong>예요.
                             </p>
                             <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', lineHeight: 1.8, fontWeight: 500, wordBreak: 'keep-all', marginTop: '1rem' }}>
                                 취미로만 그림을 그리다가 중학교 3학년 때 갑작스럽게 예술 고등학교를 진학하게 되면서 대학도 가장 맞았던 <strong>조소과</strong>로 진학하게 되었습니다.
@@ -123,8 +123,8 @@ const ArticleJosoPage = () => {
                         {/* 프로필 카드 */}
                         <div style={{ border: '3px solid #000', padding: '2.5rem', boxShadow: '8px 8px 0 #000' }}>
                             <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🐹</div>
-                            <div style={{ fontWeight: 900, fontSize: '1.8rem', marginBottom: '0.5rem' }}>전준수</div>
-                            <div style={{ fontWeight: 600, color: '#555', marginBottom: '1.5rem' }}>별명: 퀴카</div>
+                            <div style={{ fontWeight: 900, fontSize: '1.8rem', marginBottom: '0.5rem' }}>퀴카</div>
+                            <div style={{ fontWeight: 600, color: '#555', marginBottom: '1.5rem' }}>닉네임 (본명 비공개)</div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                                 {[
                                     { label: '학교', value: '홍익대학교' },
