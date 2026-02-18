@@ -35,7 +35,7 @@ const Hero = () => {
                         fontSize: '0.9rem',
                         letterSpacing: '0.05em'
                     }}>
-                        대학생 전공 & 진로 매거진
+                        대학생 전공 & 라이프스타일 웹진
                     </div>
 
                     <h1 className="hero-title" style={{
@@ -61,25 +61,24 @@ const Hero = () => {
                             fontWeight: 900,
                             WebkitTextStroke: '2px #000',
                             color: 'transparent'
-                        }}>REAL FACT</span>
+                        }}>REAL STORY</span>
                     </h1>
 
                     <p style={{
                         fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
                         fontWeight: 500,
                         marginTop: '1rem',
-                        maxWidth: '500px',
+                        maxWidth: '520px',
                         lineHeight: 1.6,
                         color: '#333',
                         background: '#fff',
                         borderLeft: '4px solid #000',
                         paddingLeft: '1.5rem',
-                        // Ensure text is readable and has space
                         marginBottom: '2rem'
                     }}>
-                        불안한 미래 때문에 떨고 있나요? <br />
-                        <b>뇌피셜은 그만.</b> 데이터로 검증된 <br />
-                        진짜 취업 현실과 로드맵을 보여드립니다.
+                        딱딱한 이론은 강의실에 두고 오세요. <br />
+                        우리가 겪은 <b>진짜 캠퍼스 이야기</b>와 <br />
+                        선배들의 생생한 경험담을 기록합니다.
                     </p>
 
                     <div style={{ marginTop: '3.5rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
@@ -100,7 +99,7 @@ const Hero = () => {
                             onMouseOver={(e) => { e.currentTarget.style.transform = 'translate(-2px, -2px)'; e.currentTarget.style.boxShadow = '8px 8px 0 rgba(0,0,0,0.3)'; }}
                             onMouseOut={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '6px 6px 0 rgba(0,0,0,0.2)'; }}
                         >
-                            내 전공 팩트체크 <ArrowRight size={20} />
+                            전공 꿀팁 보기 <ArrowRight size={20} />
                         </Link>
                         <Link to="/about" style={{
                             background: '#fff',
@@ -128,6 +127,5 @@ const Hero = () => {
         </section>
     );
 };
-
 
 export default Hero;

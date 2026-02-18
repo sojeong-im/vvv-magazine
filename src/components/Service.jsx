@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, Users, TrendingUp, ArrowRight } from 'lucide-react';
+import { BookOpen, Users, Sparkles, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Service = () => {
@@ -12,7 +12,7 @@ const Service = () => {
                 <div style={{ textAlign: 'left', marginBottom: '4rem', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
                     <h2 style={{
                         fontSize: 'clamp(2.5rem, 8vw, 6rem)',
-                        fontFamily: 'var(--font-main)', // Use Pretendard for Korean title
+                        fontFamily: 'var(--font-main)',
                         fontWeight: 900,
                         lineHeight: 1.1,
                         letterSpacing: '-0.02em',
@@ -23,20 +23,21 @@ const Service = () => {
                             color: 'transparent',
                             WebkitTextStroke: '2px #fff',
                             display: 'inline-block'
-                        }}>하는 것들.</span>
+                        }}>담는 이야기.</span>
                     </h2>
 
                     <p style={{
-                        maxWidth: '400px',
+                        maxWidth: '430px',
                         fontSize: '1.2rem',
                         lineHeight: 1.6,
                         fontWeight: 600,
                         borderLeft: '4px solid var(--primary)',
-                        paddingLeft: '1.2rem'
+                        paddingLeft: '1.2rem',
+                        opacity: 0.9
                     }}>
-                        <b>뇌피셜</b>은 사절합니다. <br />
-                        오직 <b>데이터</b>로 검증된 이야기만.<br />
-                        그게 우리의 방식입니다.
+                        <b>교과서</b>엔 없는 내용만 담습니다. <br />
+                        전공 강의실 뒷문으로 빠져나와 <br />
+                        진짜 <b>대학 생활의 낭만과 현실</b>을 기록합니다.
                     </p>
                 </div>
 
@@ -45,23 +46,23 @@ const Service = () => {
                         {
                             icon: <Users size={36} />,
                             num: '01',
-                            title: "대학생 리얼 보이스",
-                            engTitle: "YOUTH PLATFORM",
-                            desc: "대학생 에디터 100명이 직접 취재한 캠퍼스 이야기. '진짜' 대학 생활을 보여줍니다."
+                            title: "대학생 에디터",
+                            engTitle: "OUR VOICE",
+                            desc: "100명의 대학생 에디터가 직접 기획하고 씁니다. 우리 시선으로 본 캠퍼스는 어떤 모습일까요?"
                         },
                         {
-                            icon: <Database size={36} />,
+                            icon: <BookOpen size={36} />,
                             num: '02',
-                            title: "데이터 팩트 체크",
-                            engTitle: "DATA INSIGHT",
-                            desc: "전공별 취업률, 연봉, 현실 스펙. 카더라 통신 말고 확실한 데이터를 분석합니다."
+                            title: "전공별 생생 후기",
+                            engTitle: "MAJOR STORY",
+                            desc: "학점 잘 받는 법부터 교수님 뒷담화까지. 어디서도 못 듣는 선배들의 리얼한 전공 썰."
                         },
                         {
-                            icon: <TrendingUp size={36} />,
+                            icon: <Sparkles size={36} />,
                             num: '03',
-                            title: "확실한 성과 증명",
-                            engTitle: "PERFORMANCE",
-                            desc: "정확한 타겟팅으로 결과물이 다릅니다. 기업과 대학생을 잇는 가장 확실한 다리."
+                            title: "트렌드 큐레이션",
+                            engTitle: "TREND & CULTURE",
+                            desc: "요즘 대학생들은 뭐 하고 놀까? 팝업스토어, 핫플, 대외활동까지 가장 힙한 정보를 모았습니다."
                         }
                     ].map((item, idx) => (
                         <motion.div
@@ -74,11 +75,8 @@ const Service = () => {
                             style={{
                                 padding: '3rem 2rem',
                                 border: '2px solid #fff',
-                                // Responsive border logic handled by CSS grid usually, but here inline needs care. 
-                                // We'll keep full borders to be safe on mobile wrapping as well.
-                                marginTop: '-2px', // Collapse borders vertically if stacked
-                                marginLeft: idx > 0 ? '-2px' : '0', // Collapse borders horizontally if side-by-side (tricky with inline styles)
-                                // Simplified approach: let borders double up or just use margin gap 0.
+                                marginTop: '-2px',
+                                marginLeft: idx > 0 ? '-2px' : '0',
                                 background: '#000',
                                 color: '#fff',
                                 position: 'relative',
@@ -99,7 +97,7 @@ const Service = () => {
                                 </p>
                             </div>
                             <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, cursor: 'pointer', fontSize: '0.95rem' }} onClick={() => navigate('/service')}>
-                                자세히 보기 <ArrowRight size={18} />
+                                더 읽어보기 <ArrowRight size={18} />
                             </div>
                         </motion.div>
                     ))}

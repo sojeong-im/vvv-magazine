@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Sparkles, Users, Target, TrendingUp, Eye, Award, Zap, ArrowDown } from 'lucide-react';
+import { Sparkles, Users, Target, TrendingUp, Eye, Award, Zap, ArrowDown, PenTool, MessageCircle, Heart } from 'lucide-react';
 
 const AboutPage = () => {
     const { scrollYProgress } = useScroll();
@@ -9,7 +9,6 @@ const AboutPage = () => {
 
     // Counter Animation Hook
     const useCounter = (end, duration = 2000) => {
-        // ... (Counter logic same as before, simplifying for brevity if needed but keeping logic)
         const [count, setCount] = useState(0);
         const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -40,36 +39,36 @@ const AboutPage = () => {
     };
 
     const stats = [
-        { label: '함께하는 대학생', value: 50000, suffix: '+', icon: <Users /> },
-        { label: '월간 도달 수', value: 500000, suffix: '+', icon: <TrendingUp /> },
-        { label: '제휴 파트너', value: 120, suffix: '+', icon: <Award /> }
+        { label: '에디터 지원', value: 5000, suffix: '+', icon: <Users /> },
+        { label: '발행 콘텐츠', value: 1200, suffix: '+', icon: <PenTool /> },
+        { label: '독자 댓글', value: 8500, suffix: '+', icon: <MessageCircle /> }
     ];
 
     const values = [
         {
             icon: <Eye size={60} strokeWidth={1.5} />,
-            title: '꿰뚫다', // Vision -> 꿰뚫다
-            engTitle: 'VISION',
-            subtitle: '통찰력',
-            description: '데이터는 거짓말을 하지 않습니다. 표면 아래 숨겨진 진짜 트렌드를 데이터로 꿰뚫어 봅니다.',
+            title: '발견하다', // Vision -> 발견하다
+            engTitle: 'DISCOVER',
+            subtitle: '발견',
+            description: '누구나 자신만의 멋진 색깔을 가지고 있습니다. 우리는 당신조차 몰랐던 당신의 매력을 찾아내고 조명합니다.',
             color: '#000',
             bg: '#fff'
         },
         {
-            icon: <Target size={60} strokeWidth={1.5} />,
-            title: '증명하다', // Value -> 증명하다
-            engTitle: 'VALUE',
-            subtitle: '실력',
-            description: '단순한 정보 전달을 넘어, 실질적인 가치를 창출하고 결과를 숫자로 증명합니다.',
+            icon: <PenTool size={60} strokeWidth={1.5} />,
+            title: '기록하다', // Value -> 기록하다
+            engTitle: 'RECORD',
+            subtitle: '기록',
+            description: '성공의 순간뿐만 아니라 실패와 방황의 시간도 소중합니다. 대학 생활의 모든 찰나를 진솔하게 기록합니다.',
             color: '#fff',
             bg: '#000'
         },
         {
-            icon: <Zap size={60} strokeWidth={1.5} />,
-            title: '이루다', // Victory -> 이루다
-            engTitle: 'VICTORY',
-            subtitle: '성취',
-            description: 'VVV와 함께하는 모든 순간이 당신의 커리어에 확실한 승리의 기록으로 남습니다.',
+            icon: <Heart size={60} strokeWidth={1.5} />,
+            title: '연결하다', // Victory -> 연결하다
+            engTitle: 'CONNECT',
+            subtitle: '연결',
+            description: '혼자 고민하지 마세요. VVV 매거진은 비슷한 고민을 가진 대학생들을 이야기로 연결합니다.',
             color: '#000',
             bg: 'var(--primary)'
         }
@@ -79,7 +78,7 @@ const AboutPage = () => {
         <div style={{ background: '#fff', minHeight: '100vh', paddingTop: 'var(--nav-height)', color: '#000' }}>
             <Helmet>
                 <title>소개 | VVV 매거진</title>
-                <meta name="description" content="VVV 매거진은 20대 대학생 기자단이 만드는 트렌드 매거진입니다. 진짜 20대의 목소리를 데이터 기반의 인사이트로 전달합니다." />
+                <meta name="description" content="VVV 매거진은 대학생들의 생생한 이야기를 담는 콘텐츠 플랫폼입니다. 전공, 진로, 캠퍼스 라이프를 기록합니다." />
             </Helmet>
 
             {/* Brutalist Hero Section - KOREAN */}
@@ -113,12 +112,12 @@ const AboutPage = () => {
                         letterSpacing: '-0.03em',
                         wordBreak: 'keep-all'
                     }}>
-                        20대의<br />
+                        청춘의<br />
                         <span style={{
                             color: 'transparent',
                             WebkitTextStroke: '3px #000',
-                            fontStyle: 'normal' // Korean fonts don't always look good italicized in titles
-                        }}>목소리</span>
+                            fontStyle: 'normal'
+                        }}>페이지</span>
                     </h1>
 
                     <div style={{
@@ -130,9 +129,9 @@ const AboutPage = () => {
                         marginTop: '2rem'
                     }}>
                         <p style={{ fontSize: '1.2rem', fontWeight: 600, lineHeight: 1.6, flex: 1, wordBreak: 'keep-all' }}>
-                            <b>VVV 매거진</b>은 대학생 기자단이 직접 만드는 <strong>리얼 보이스 플랫폼</strong>입니다. <br />
-                            우리는 기성세대의 시선이 아닌, 우리만의 언어로 세상을 이야기합니다. <br />
-                            가짜뉴스와 뇌피셜은 거부합니다. 팩트만 담았습니다.
+                            <b>VVV 매거진</b>은 대학생 에디터들이 직접 만드는 <strong>콘텐츠 플랫폼</strong>입니다. <br />
+                            우리는 숫자와 스펙 대신, 낭만과 경험을 이야기합니다. <br />
+                            지금 가장 빛나는 당신의 이야기를 들려주세요.
                         </p>
                     </div>
                 </div>
