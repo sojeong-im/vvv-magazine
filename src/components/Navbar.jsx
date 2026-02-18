@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 
+import logo from '../assets/vvv_logo.png';
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -43,13 +45,7 @@ const Navbar = () => {
           onClick={() => scrollToSection('hero')}
           style={{ cursor: 'pointer' }}
         >
-          <span style={{
-            fontSize: '1.8rem',
-            fontWeight: '900',
-            fontFamily: 'var(--font-serif)',
-            color: 'var(--text-dark)',
-            letterSpacing: '0.05em'
-          }}>VVV</span>
+          <img src={logo} alt="VVV Magazine" style={{ height: '40px', width: 'auto' }} />
         </div>
 
         {/* Desktop Menu */}
