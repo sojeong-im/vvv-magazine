@@ -10,6 +10,7 @@ import JoinPage from './components/JoinPage';
 import ServicePage from './components/ServicePage';
 import AboutPage from './components/AboutPage';
 import MajorGuidePage from './components/MajorGuidePage';
+import ArticleJosoPage from './components/ArticleJosoPage';
 
 const Home = () => (
   <>
@@ -36,6 +37,7 @@ function App() {
         <Route path="/major-guide" element={<MajorGuidePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/join" element={<JoinPage />} />
+        <Route path="/article/joso" element={<ArticleJosoPage />} />
       </Routes>
       <Footer />
     </div>

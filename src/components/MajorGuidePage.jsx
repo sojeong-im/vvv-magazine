@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Code, PenTool, Briefcase, GraduationCap, Target, ArrowRight, Map, MessageSquare, Briefcase as JobIcon, BookOpen, UserCircle, Microscope, Tv, HeartPulse } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const MajorGuidePage = () => {
     const [selectedMajor, setSelectedMajor] = useState('tech');
@@ -417,6 +418,30 @@ const MajorGuidePage = () => {
                     </main>
                 </div>
             </div>
+
+            {/* ── 학과시식코너 배너 ── */}
+            <section style={{ borderTop: '4px solid #000', background: '#000', color: '#fff' }}>
+                <div className="container" style={{ padding: '4rem 0' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+                        <div>
+                            <div style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.1em', marginBottom: '0.8rem' }}>NEW SERIES</div>
+                            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 900, marginBottom: '0.8rem', wordBreak: 'keep-all' }}>학과시식코너</h2>
+                            <p style={{ fontSize: '1.1rem', fontWeight: 500, opacity: 0.8, wordBreak: 'keep-all', maxWidth: '480px' }}>
+                                실제 전공생에게 직접 물었습니다. 드라마 속 이야기 말고, 진짜 학과 이야기.
+                            </p>
+                        </div>
+                        <Link to="/article/joso" style={{
+                            background: 'var(--primary)', color: '#000',
+                            padding: '18px 36px', fontWeight: 900, fontSize: '1.1rem',
+                            textDecoration: 'none', border: '3px solid var(--primary)',
+                            display: 'inline-flex', alignItems: 'center', gap: '10px',
+                            whiteSpace: 'nowrap'
+                        }}>
+                            조소과 편 읽기 <ArrowRight size={20} />
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
