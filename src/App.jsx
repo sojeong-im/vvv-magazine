@@ -11,12 +11,15 @@ import ServicePage from './components/ServicePage';
 import AboutPage from './components/AboutPage';
 import MajorGuidePage from './components/MajorGuidePage';
 import ArticleJosoPage from './components/ArticleJosoPage';
+import ArticleGungmunPage from './components/ArticleGungmunPage';
+import ArticleSection from './components/ArticleSection';
 
 const Home = () => (
   <>
     <Hero />
     <About />
     <Service />
+    <ArticleSection />
   </>
 );
 
@@ -38,6 +41,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/join" element={<JoinPage />} />
         <Route path="/article/joso" element={<ArticleJosoPage />} />
+        <Route path="/article/gungmun" element={<ArticleGungmunPage />} />
       </Routes>
       <Footer />
     </div>
